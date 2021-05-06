@@ -1,12 +1,12 @@
 {
   "name": "@tsp-test/root-config",
   "scripts": {
-    "start": "../microfrontend-manager-t/node_modules/.bin/webpack serve --port 9000 --env isLocal",
-    "lint": "../microfrontend-manager-t/node_modules/.bin/eslint src --ext js",
-    "test": "../microfrontend-manager-t/node_modules/.bin/cross-env BABEL_ENV=test jest --passWithNoTests",
-    "format": "../microfrontend-manager-t/node_modules/.bin/prettier --write .",
-    "check-format": "../microfrontend-manager-t/node_modules/.bin/prettier --check .",
-    "build": "../microfrontend-manager-t/node_modules/.bin/webpack --mode=production"
+    "start": "../microfrontend-manager/node_modules/.bin/webpack serve --port 9000 --env isLocal",
+    "lint": "../microfrontend-manager/node_modules/.bin/eslint src --ext js",
+    "test": "../microfrontend-manager/node_modules/.bin/cross-env BABEL_ENV=test jest --passWithNoTests",
+    "format": "../microfrontend-manager/node_modules/.bin/prettier --write .",
+    "check-format": "../microfrontend-manager/node_modules/.bin/prettier --check .",
+    "build": "../microfrontend-manager/node_modules/.bin/webpack --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

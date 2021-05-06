@@ -1,13 +1,19 @@
 import {registerApplication, start} from "single-spa";
 
 registerApplication({
-    name: "@single-spa/welcome",
+    name: "mycovidboard",
     app: () =>
-        System.import(
-            "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-        ),
-    activeWhen: ["/"],
+        System.import('mycovidboard'),
+    activeWhen: '/mycovidboard'
+})
+;
+registerApplication({
+    name: "datatable",
+    app: () =>
+        System.import('datatable'),
+    activeWhen: '/datatable'
 });
+
 
 // registerApplication({
 //   name: "@tsp-test/navbar",
