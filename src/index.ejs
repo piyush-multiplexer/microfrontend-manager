@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Root Config</title>
-    <a href="/datatable">DataTable</a>
-    <a href="/mycovidboard">MyCovidBoard</a>
+
     <!--    <meta http-equiv="Content-Security-Policy"-->
     <!--          content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">-->
     <meta name="importmap-type" content="systemjs-importmap"/>
+    <!--    <script type="systemjs-importmap">-->
+    <!--    {-->
+    <!--      "imports": {-->
+    <!--        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",-->
+    <!--        "@tsp-test/mycovidboard": "https://microfrontend-mycovidboard.web.app/js/app.8224a834.js",-->
+    <!--          "@tsp-test/datatable": "https://microfrontend-datatable.web.app/js/app.2eae023d.js"-->
+    <!--      }-->
+    <!--    }-->
+
+    <!--    </script>-->
     <script type="systemjs-importmap">
     {
       "imports": {
@@ -18,7 +27,6 @@
           "datatable": "//localhost:10002/js/app.js"
       }
     }
-
     </script>
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
 
@@ -31,7 +39,6 @@
           "@tsp-test/datatable": "//localhost:10002/js/app.js"
       }
     }
-
         </script>
     <% } %>
     <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
@@ -44,7 +51,10 @@
     <% } %>
 </head>
 <body>
-<main></main>
+<main>
+    <a href="/datatable">DataTable(Vue3, Quasar)</a>
+    <a href="/mycovidboard">MyCovidBoard(Vue2, Vuetify)</a>
+</main>
 <script>
     System.import('@tsp-test/root-config');
     System.import('@tsp-test/datatable');
